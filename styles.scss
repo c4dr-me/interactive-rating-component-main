@@ -1,0 +1,133 @@
+$Orange: hsl(25, 97%, 53%);
+
+$White: hsl(0, 0%, 100%);
+$Light_Grey: hsl(217, 12%, 63%);
+$Medium_Grey: hsl(216, 12%, 54%);
+$Dark_Blue: hsl(213, 19%, 18%);
+$Very_Dark_Blue: hsl(216, 12%, 8%);
+$fw_1: 400;
+$fw_2: 700;
+
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ol{
+    list-style-type: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+body{
+    min-height: 100vh;
+    font-size: .9375rem;
+    background-color: $Very_Dark_Blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+  background-image: linear-gradient(to top, $Dark_Blue,hsla(213, 19%, 18%,0.1));
+    font-family: 'Overpass', sans-serif;
+    max-width: 27rem;
+    padding : 3rem 2.5rem;
+    border-radius: 2rem;;
+}
+.rating-card-star {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 100vw;
+    background-color:  hsla(217, 12%, 63%,0.13);
+  }
+.rating-card-header{
+    color: $White;
+    margin: 1rem 0 ;
+}
+.rating-card-ctn{
+    color: $Light_Grey;
+}
+/* Apply styles to the rating buttons */
+.rating-btn {
+  background-color: hsla(213, 19%, 18%,2);
+  border: none;
+  border-radius: 50%;
+  color: $White; 
+  font-size: inherit;
+  padding: 0.85rem;
+  margin: 0.75rem 0.25rem;
+  cursor: pointer; 
+}
+.rating-btn:hover{
+  background-color: $Light_Grey;
+}
+.rating-btn:active{
+  background-color: $Orange;
+}
+
+.rating_list {
+  list-style: none; 
+  display: flex; 
+  justify-content: space-around; 
+}
+
+/* Optional: Style the "Submit" button */
+.review-card-btn button {
+  background-color: $Orange; 
+  border: none;
+  border-radius: 2rem;
+  color: $White; 
+  padding: 0.85rem;
+  cursor: pointer;
+  border: none; 
+  width: 100%;
+}
+
+.thank-you-card{
+  color: $White;
+  background-image: linear-gradient( to bottom, #222933, #1b2128 );
+}
+.selected-rating{
+  color: $Orange;
+  border-radius: 2rem;
+  border: 1px $Medium_Grey;
+  margin: auto;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #262e38;
+  width: fit-content;
+}
+.card__heading{
+  margin: auto;
+  width: fit-content;
+  margin-bottom: 0.75rem;
+}
+.thank-you__desc{
+  color: $Light_Grey;
+}
+.thank-you__img{
+  margin: auto;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }

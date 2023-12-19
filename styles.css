@@ -1,0 +1,136 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ol {
+  list-style-type: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+body {
+  min-height: 100vh;
+  font-size: 0.9375rem;
+  background-color: hsl(216, 12%, 8%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-image: linear-gradient(to top, hsl(213, 19%, 18%), hsla(213, 19%, 18%, 0.1));
+  font-family: "Overpass", sans-serif;
+  max-width: 27rem;
+  padding: 3rem 2.5rem;
+  border-radius: 2rem;
+}
+
+.rating-card-star {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 100vw;
+  background-color: hsla(217, 12%, 63%, 0.13);
+}
+
+.rating-card-header {
+  color: hsl(0, 0%, 100%);
+  margin: 1rem 0;
+}
+
+.rating-card-ctn {
+  color: hsl(217, 12%, 63%);
+}
+
+/* Apply styles to the rating buttons */
+.rating-btn {
+  background-color: hsl(213, 19%, 18%);
+  border: none;
+  border-radius: 50%;
+  color: hsl(0, 0%, 100%);
+  font-size: inherit;
+  padding: 0.85rem;
+  margin: 0.75rem 0.25rem;
+  cursor: pointer;
+}
+
+.rating-btn:hover {
+  background-color: hsl(217, 12%, 63%);
+}
+
+.rating-btn:active {
+  background-color: hsl(25, 97%, 53%);
+}
+
+.rating_list {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* Optional: Style the "Submit" button */
+.review-card-btn button {
+  background-color: hsl(25, 97%, 53%);
+  border: none;
+  border-radius: 2rem;
+  color: hsl(0, 0%, 100%);
+  padding: 0.85rem;
+  cursor: pointer;
+  border: none;
+  width: 100%;
+}
+
+.thank-you-card {
+  color: hsl(0, 0%, 100%);
+  background-image: linear-gradient(to bottom, #222933, #1b2128);
+}
+
+.selected-rating {
+  color: hsl(25, 97%, 53%);
+  border-radius: 2rem;
+  border: 1px hsl(216, 12%, 54%);
+  margin: auto;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #262e38;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.card__heading {
+  margin: auto;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 0.75rem;
+}
+
+.thank-you__desc {
+  color: hsl(217, 12%, 63%);
+}
+
+.thank-you__img {
+  margin: auto;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}/*# sourceMappingURL=styles.css.map */
