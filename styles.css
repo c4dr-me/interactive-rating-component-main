@@ -43,20 +43,15 @@ fieldset {
   padding: 1.2rem;
 }
 
-input[type=radio] {
-  display: none;
-}
-
-.rating-bubble {
-  background-color: hsl(213, 19%, 18%);
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  color: hsl(217, 12%, 63%);
-  text-align: center;
-  line-height: 3rem;
-  margin-top: 1rem;
-  cursor: pointer;
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .rating-card-star {
@@ -78,17 +73,35 @@ input[type=radio] {
 }
 
 /* Apply styles to the rating buttons */
-.rating-bubble:hover,
-.rating-bubble:active,
-.rating-bubble:focus {
+.rating-bubble {
+  /* base styles here */
+  background-color: hsl(213, 19%, 18%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: hsl(217, 12%, 63%);
+  text-align: center;
+  line-height: 3rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.rating-bubble:has(input:focus-visible) {
+  /* checked styles here */
   background-color: hsl(217, 12%, 63%);
   color: white;
   font-weight: 700;
 }
 
-/* Optional: Add a class to persist the active state using JavaScript */
-.rating-bubble.active {
+.rating-bubble:has(input:checked) {
+  /* focus styles here */
   background-color: hsl(25, 97%, 53%);
+  color: white;
+  font-weight: 700;
+}
+
+.rating-bubble:hover {
+  background-color: hsl(217, 12%, 63%);
   color: white;
   font-weight: 700;
 }
