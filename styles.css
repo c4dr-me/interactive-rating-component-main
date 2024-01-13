@@ -31,18 +31,38 @@ body {
   align-items: center;
 }
 
-.card {
-  background-image: linear-gradient(to top, hsl(213, 19%, 18%), hsla(213, 19%, 18%, 0.1));
+#ratingForm {
+  background-image: radial-gradient(circle at 50% 0, hsl(213, 19%, 18%), hsl(216, 12%, 8%) 150%);
   font-family: "Overpass", sans-serif;
-  max-width: 27rem;
-  padding: 3rem 2.5rem;
-  border-radius: 2rem;
+  max-width: 22rem;
+  border-radius: 1rem;
+}
+
+fieldset {
+  border: none;
+  padding: 1.2rem;
+}
+
+input[type=radio] {
+  display: none;
+}
+
+.rating-bubble {
+  background-color: hsl(213, 19%, 18%);
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  color: hsl(217, 12%, 63%);
+  text-align: center;
+  line-height: 3rem;
+  margin-top: 1rem;
+  cursor: pointer;
 }
 
 .rating-card-star {
   padding: 1rem;
   margin-bottom: 2rem;
-  border-radius: 100vw;
+  border-radius: 2rem;
   background-color: hsla(217, 12%, 63%, 0.13);
 }
 
@@ -53,32 +73,30 @@ body {
 
 .rating-card-ctn {
   color: hsl(217, 12%, 63%);
+  font-size: 15px;
+  word-wrap: break-word;
 }
 
 /* Apply styles to the rating buttons */
-.rating-btn {
-  background-color: hsl(213, 19%, 18%);
-  border: none;
-  border-radius: 50%;
-  color: hsl(0, 0%, 100%);
-  font-size: inherit;
-  padding: 0.85rem;
-  margin: 0.75rem 0.25rem;
-  cursor: pointer;
-}
-
-.rating-btn:hover {
+.rating-bubble:hover,
+.rating-bubble:active,
+.rating-bubble:focus {
   background-color: hsl(217, 12%, 63%);
+  color: white;
+  font-weight: 700;
 }
 
-.rating-btn:active {
+/* Optional: Add a class to persist the active state using JavaScript */
+.rating-bubble.active {
   background-color: hsl(25, 97%, 53%);
+  color: white;
+  font-weight: 700;
 }
 
 .rating_list {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 /* Optional: Style the "Submit" button */
@@ -91,11 +109,18 @@ body {
   cursor: pointer;
   border: none;
   width: 100%;
+  margin-top: 1rem;
+  text-transform: uppercase;
 }
 
 .thank-you-card {
   color: hsl(0, 0%, 100%);
-  background-image: linear-gradient(to bottom, #222933, #1b2128);
+  background-image: radial-gradient(circle at 50% 0, hsl(213, 19%, 18%), hsl(216, 12%, 8%) 150%);
+  font-family: "Overpass", sans-serif;
+  max-width: 22rem;
+  border-radius: 1rem;
+  display: none;
+  padding: 1.2rem;
 }
 
 .selected-rating {
@@ -120,6 +145,8 @@ body {
 
 .thank-you__desc {
   color: hsl(217, 12%, 63%);
+  padding: 0 1rem 1rem 1rem;
+  text-align: center;
 }
 
 .thank-you__img {
@@ -129,8 +156,10 @@ body {
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: white;
+  margin-top: 1rem;
 }
 
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: hsl(25, 97%, 53%);
 }/*# sourceMappingURL=styles.css.map */
