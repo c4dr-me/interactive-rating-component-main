@@ -100,9 +100,8 @@ fieldset{
 }
 .rating-bubble:has(input:focus-visible) {
   /* checked styles here */
-  background-color: $Light_Grey ;
-  color: white;
-  font-weight: $fw_2;
+  outline: 2px solid white;
+  border-radius: 30px;
 }
 .rating-bubble:has(input:checked) {
   /* focus styles here */

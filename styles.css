@@ -88,9 +88,8 @@ fieldset {
 
 .rating-bubble:has(input:focus-visible) {
   /* checked styles here */
-  background-color: hsl(217, 12%, 63%);
-  color: white;
-  font-weight: 700;
+  outline: 2px solid white;
+  border-radius: 30px;
 }
 
 .rating-bubble:has(input:checked) {
